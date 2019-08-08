@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class PagerAdapter extends RecyclerView.Adapter<PagerAdapter.ViewHolder> {
@@ -38,7 +40,10 @@ public class PagerAdapter extends RecyclerView.Adapter<PagerAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(final PagerAdapter.ViewHolder holder, final int position) {
 
-        holder.imageView.setImageResource(list.get(position).getImg());
+        //holder.imageView.setImageResource(list.get(position).getImg());
+        Picasso.get()
+                .load(list.get(position).getImg())
+                .into(holder.imageView);
         holder.textView.setText(list.get(position).getTitle());
 
 
@@ -54,7 +59,6 @@ public class PagerAdapter extends RecyclerView.Adapter<PagerAdapter.ViewHolder> 
     @Override
     public void onViewAttachedToWindow(@NonNull ViewHolder holder) {
         posAttached=holder.getAdapterPosition();
-       // Log.e("PagerAdapter","pos attached "+posAttached);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
         }

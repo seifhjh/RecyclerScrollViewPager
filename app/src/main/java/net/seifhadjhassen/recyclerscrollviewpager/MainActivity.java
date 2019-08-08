@@ -21,9 +21,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerViewPager=findViewById(R.id.pager);
-        recyclerViewPager.addItem(new PagerModel(R.drawable.cover1,"Vikings"));
-        recyclerViewPager.addItem(new PagerModel(R.drawable.cover2,"The nutcracker and the four realms"));
-        recyclerViewPager.addItem(new PagerModel(R.drawable.cover3,"Flash"));
+        // add item from resource
+
+        recyclerViewPager.addItem(new PagerModel(R.drawable.cover1,"Vikings",getApplicationContext()));
+        recyclerViewPager.addItem(new PagerModel(R.drawable.cover2,"The nutcracker and the four realms",getApplicationContext()));
+        recyclerViewPager.addItem(new PagerModel(R.drawable.cover3,"Flash",getApplicationContext()));
+
+        //add item from url
+
+        //  recyclerViewPager.addItem(new PagerModel("http://i.imgur.com/DvpvklR.png","Vikings"));
+
         recyclerViewPager.start();
 
 
