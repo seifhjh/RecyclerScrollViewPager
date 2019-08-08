@@ -52,6 +52,15 @@ dependencies {
     // don't forget this line
     recyclerViewPager.start();
 ```
+#### Item click event
+``` java
+recyclerViewPager.setOnItemClickListener(new PagerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Toast.makeText(getApplicationContext(),"click pos "+position,Toast.LENGTH_SHORT).show();
+            }
+        });
+```
 
 ### Attribute
 XML| JAVA| Default|Definition
