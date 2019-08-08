@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
         //  recyclerViewPager.addItem(new PagerModel("http://i.imgur.com/DvpvklR.png","Vikings"));
 
-
         recyclerViewPager.start();
 
         recyclerViewPager.setOnItemClickListener(new PagerAdapter.OnItemClickListener() {
