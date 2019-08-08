@@ -156,6 +156,7 @@ public class RecyclerViewPager extends RecyclerView {
 
     public void setOnItemClickListener(PagerAdapter.OnItemClickListener itemClickListener){
         try {
+
             ((PagerAdapter) getAdapter()).setOnclickItemListener(itemClickListener);
 
         } catch (Exception e) {
