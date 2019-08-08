@@ -30,6 +30,8 @@ public class RecyclerViewPager extends RecyclerView {
     private String TAG="RecyclerViewPager";
     private int millis=2000;
 
+
+
     public RecyclerViewPager(@NonNull Context context) {
         super(context);
         Log.e(TAG,"RecyclerViewPager(context)");
@@ -150,5 +152,14 @@ public class RecyclerViewPager extends RecyclerView {
 
     public void setTime(int timeMillis) {
         this.millis = millis;
+    }
+
+    public void setOnItemClickListener(PagerAdapter.OnItemClickListener itemClickListener){
+        try {
+            ((PagerAdapter) getAdapter()).setOnclickItemListener(itemClickListener);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

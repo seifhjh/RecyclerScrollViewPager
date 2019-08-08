@@ -2,7 +2,9 @@ package net.seifhadjhassen.recyclerscrollviewpager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
+import net.seifhadjhassen.recyclerviewpager.PagerAdapter;
 import net.seifhadjhassen.recyclerviewpager.PagerModel;
 import net.seifhadjhassen.recyclerviewpager.RecyclerViewPager;
 
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerViewPager=findViewById(R.id.pager);
+        RecyclerViewPager recyclerViewPager=findViewById(R.id.pager);
         // add item from resource
 
         recyclerViewPager.addItem(new PagerModel(R.drawable.cover1,"Vikings",getApplicationContext()));
@@ -32,7 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
         //  recyclerViewPager.addItem(new PagerModel("http://i.imgur.com/DvpvklR.png","Vikings"));
 
+
         recyclerViewPager.start();
+
+        recyclerViewPager.setOnItemClickListener(new PagerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Toast.makeText(getApplicationContext(),"click pos "+position,Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
     }
