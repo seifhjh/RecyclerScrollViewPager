@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         //add item from url
 
+
         //  recyclerViewPager.addItem(new PagerModel("http://i.imgur.com/DvpvklR.png","Vikings"));
 
         recyclerViewPager.start();
