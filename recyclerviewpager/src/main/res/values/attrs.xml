@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RecyclerViewPager">
+        <attr name="svp_runAuto" format="boolean" />
+        <attr name="svp_colorActiveIndicator" format="color" />
+        <attr name="svp_colorInactiveIndicator" format="color" />
+        <attr name="svp_timeMillis" format="integer" />
+
+    </declare-styleable>
+</resources>
