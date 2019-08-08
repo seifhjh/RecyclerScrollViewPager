@@ -17,7 +17,7 @@ allprojects {
 ##### Step 2. Add the dependency
 ```
 dependencies {
-	  implementation 'com.github.seifhjh:RecyclerScrollViewPager:1.0.1'
+	  implementation 'com.github.seifhjh:RecyclerScrollViewPager:1.0.2'
 	}
 ```
 
